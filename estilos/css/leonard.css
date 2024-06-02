@@ -1,0 +1,108 @@
+/* Estilização do menu */
+.menu-bar {
+    border-radius: 25px;
+    height: fit-content;
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparência aumentada */
+    -webkit-backdrop-filter: blur(505px); /* Desfoque mais forte */
+    backdrop-filter: blur(45px); /* Desfoque mais forte */
+    align-items: center;
+    padding: 0 10px;
+    margin: 50px 0 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionando sombra ao menu */
+    backdrop-filter: blur(8px); /* Efeito de desfoque */
+}
+
+.menu-bar li {
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    
+}
+
+.menu-bar li::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 25px;
+    
+}
+
+.menu-bar li:hover {
+    color: rgb(170, 167, 167);
+    backdrop-filter: blur(8px); /* Efeito de desfoque */
+
+}
+
+.menu-bar li:hover::before {
+    background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+    box-shadow: 0px 3px 20px 0px rgb(141, 138, 138);
+    transform: scale(1.2);
+   
+}
+
+/* Ajuste para posicionar o input acima do footer */
+.user-input-container {
+    position: fixed;
+    bottom: 60px; /* Mais acima */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Estilo de vidro */
+    backdrop-filter: blur(8px); /* Efeito de desfoque */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do botão de envio */
+.user-input-container button {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Removendo a borda */
+    border-radius: 5px; /* Arredondando as bordas */
+    padding: 5px; /* Espaçamento interno */
+    cursor: pointer; /* Alterando o cursor ao passar sobre o botão */
+    margin-left: 10px; /* Adicionando margem à esquerda */
+}
+
+/* Estilização do botão de microfone */
+.user-input-container .btn-microphone {
+    margin-left: 10px; /* Adicionando margem à esquerda do botão de microfone */
+    /* Insira aqui a estilização específica para o botão do microfone, como mudança de cor, tamanho do ícone, etc. */
+    /* Lembre-se de incluir um comentário para indicar onde você pode alterar o ícone */
+}
+
+/* Estilização do footer */
+footer {
+    position: fixed;
+    bottom: 10px; /* Mais para baixo */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #777; /* Cor do texto cinza */
+    font-size: 12px; /* Tamanho da fonte */
+}
+
+/* Ajuste para posicionar os botões lado a lado */
+.user-input-container .input-group-append {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+/* Estilos para garantir que o canvas das partículas ocupe a tela inteira */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000; /* Fundo preto */
+}
+canvas {
+
+    vertical-align: bottom;
+}
