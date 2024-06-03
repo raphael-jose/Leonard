@@ -1,16 +1,13 @@
 /* Estilização do menu */
 .menu-bar {
     border-radius: 25px;
-    height: fit-content;
     display: inline-flex;
     background-color: rgba(255, 255, 255, 0.2); /* Transparência aumentada */
-    -webkit-backdrop-filter: blur(505px); /* Desfoque mais forte */
-    backdrop-filter: blur(45px); /* Desfoque mais forte */
+    backdrop-filter: blur(8px); /* Efeito de desfoque */
     align-items: center;
-    padding: 0 10px;
+    padding: 10px;
     margin: 50px 0 0 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionando sombra ao menu */
-    backdrop-filter: blur(8px); /* Efeito de desfoque */
 }
 
 .menu-bar li {
@@ -23,7 +20,6 @@
     position: relative;
     cursor: pointer;
     white-space: nowrap;
-    
 }
 
 .menu-bar li::before {
@@ -36,20 +32,16 @@
     z-index: -1;
     transition: 0.2s;
     border-radius: 25px;
-    
 }
 
 .menu-bar li:hover {
     color: rgb(170, 167, 167);
-    backdrop-filter: blur(8px); /* Efeito de desfoque */
-
 }
 
 .menu-bar li:hover::before {
     background: linear-gradient(to bottom, #e8edec, #d2d1d3);
     box-shadow: 0px 3px 20px 0px rgb(141, 138, 138);
     transform: scale(1.2);
-   
 }
 
 /* Ajuste para posicionar o input acima do footer */
@@ -63,7 +55,6 @@
     justify-content: center;
     width: 90%;
     max-width: 600px;
-    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.1); /* Estilo de vidro */
     backdrop-filter: blur(8px); /* Efeito de desfoque */
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -83,26 +74,42 @@
     margin-left: 10px; /* Adicionando margem à esquerda */
 }
 
-/* Estilização do botão de microfone */
-.user-input-container .btn-microphone {
-    margin-left: 10px; /* Adicionando margem à esquerda do botão de microfone */
-    /* Insira aqui a estilização específica para o botão do microfone, como mudança de cor, tamanho do ícone, etc. */
-    /* Lembre-se de incluir um comentário para indicar onde você pode alterar o ícone */
-}
-
-/* Estilização do footer */
-footer {
-    position: fixed;
-    bottom: 10px; /* Mais para baixo */
-    width: 100%;
+/* Estilização do campo de retorno de texto */
+.user-output {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    max-width: 90%;
     padding: 10px;
-    color: #777; /* Cor do texto cinza */
-    font-size: 12px; /* Tamanho da fonte */
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo semi-transparente */
+    border-radius: 10px; /* Borda arredondada */
 }
 
-/* Ajuste para posicionar os botões lado a lado */
-.user-input-container .input-group-append {
-    display: flex;
-    align-items: center;
+/* Estilização dos balões de conversa */
+/* Estilização dos balões de conversa */
+* message-container.css */
+.message-container {
+  display: flex;
+  margin-bottom: 10px; /* Margem entre os balões */
 }
+
+.user-message {
+  justify-content: flex-start; /* Alinha os balões de conversa do usuário à esquerda */
+}
+
+.leonard-message {
+  justify-content: flex-end; /* Alinha os balões de conversa do Leonard à direita */
+}
+
+/* message-bubble.css */
+.message-bubble {
+    background-color: #dcf8c6; /* Cor de fundo dos balões de conversa do usuário */
+    color: #000; /* Cor do texto dos balões de conversa */
+    max-width: 70%; /* Largura máxima dos balões */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    margin-left: 10px; /* Adiciona margem à esquerda para os balões do usuário */
+    margin-right: 10px; /* Adiciona margem à direita para os balões do Leonard */
+  }
